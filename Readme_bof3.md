@@ -1,4 +1,4 @@
-# Lab bof2
+# Lab bof3
 Hà Quốc Tiến - 22110075<br>
 ## Target
 - `void (*func)()=sup;` is calling the `sup()`, we want it to run the `shell()` instead.
