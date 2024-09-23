@@ -4,7 +4,7 @@ Hà Quốc Tiến - 22110075<br>
 - Causing buffer-overflow in order to call `myfunc()` and print out `You got the flag`.
 ## Solution
 - Stack frames when call `vuln()` <br>
-![ctf_1]()
+![ctf_1](https://github.com/Quoctienha/InformationSecurity_Labs-/blob/main/img/ctf_1.png)
 - Viewing the stack frame, we have an idea that change the `Return Address` of `vuln()` with `myfunc()`'s address for it to run.
 
 1. Get `myfunc()`'s address, using GDB or this.
@@ -17,12 +17,12 @@ Hà Quốc Tiến - 22110075<br>
     Disassemble `myfunc()`
     > disas myfunc
     In this case is `0x0804851b`
-    ![ctf_4]()
+    ![ctf_4](https://github.com/Quoctienha/InformationSecurity_Labs-/blob/main/img/ctf_4.png)
 
 2. To get pass the first if statment, create a `flag1.txt` that isn't empty. Here we can't use the `fgets()` to conduct buffer-overflow, because `fgets()` take 64 bytes of data and `filebuf[64]` can store 64 bytes of data. So it's safe here.
     > echo "flag1 is here" > flag1.txt
 
-    ![ctf_2]()
+    ![ctf_2](https://github.com/Quoctienha/InformationSecurity_Labs-/blob/main/img/ctf_2.png)
 3. In order to get pass, the two next if statment, we need `q = 0x44644262` and `p = 0x04081211`.
 
     We can she that the computer will base on the `EBP` to calculate the position of `q`([ebp+0xc] which is ebp + 12 bytes) and `p` ([ebp+0x8] which is ebp + 8 bytes)<br>
