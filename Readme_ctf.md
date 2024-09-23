@@ -16,7 +16,7 @@ Hà Quốc Tiến - 22110075<br>
 
     Disassemble `myfunc()`
     > disas myfunc
-    In this case is `0x0804851b`
+    In this case is `0x0804851b` <br>
     ![ctf_4](https://github.com/Quoctienha/InformationSecurity_Labs-/blob/main/img/ctf_4.png)
 
 2. To get pass the first if statment, create a `flag1.txt` that isn't empty. Here we can't use the `fgets()` to conduct buffer-overflow, because `fgets()` take 64 bytes of data and `filebuf[64]` can store 64 bytes of data. So it's safe here.
