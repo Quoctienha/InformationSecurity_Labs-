@@ -26,7 +26,7 @@ Hà Quốc Tiến - 22110075<br>
 3. In order to get pass, the two next if statment, we need `q = 0x44644262` and `p = 0x04081211`.
 
     We can she that the computer will base on the `EBP` to calculate the position of `q`([ebp+0xc] which is ebp + 12 bytes) and `p` ([ebp+0x8] which is ebp + 8 bytes)<br>
-    ![ctf_3](https://github.com/Quoctienha/InformationSecurity_Labs-/blob/main/img/ctf_2.png)
+    ![ctf_3](https://github.com/Quoctienha/InformationSecurity_Labs-/blob/main/img/ctf_3.png)
     
     So, if we want to change the data in `p` and `q` using buffer-overflow. We have to know the position of `EBP` when `vuln()` is done.<br>
 
